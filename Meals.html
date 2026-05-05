@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="utf-8">
+    <title>صفحة الوجبات</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="myFunctions.js"></script>
+</head>
+<body>
+
+    <h2>قائمة الوجبات</h2>
+
+    <table id="mealsTable">
+        <thead>
+            <tr>
+                <th>الرمز</th>
+                <th>الوجبة</th>
+                <th>السعر</th>
+                <th>إظهار التفاصيل</th>
+                <th>اختيار</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>SF-001</td>
+                <td>وجبة سمك مشوي</td>
+                <td>110000</td>
+                <td><input type="checkbox" class="detail-check"></td>
+                <td><input type="checkbox" class="select-meal"></td>
+            </tr>
+            <tr class="details-row" style="display:none;">
+                <td colspan="5">
+                    <div class="meal-info">
+                        <img src="fish.jpg" alt="وجبة سمك" width="200">
+
+                        <p><strong>المطبخ:</strong> المصري</p>
+                        <p><strong>تصنيف الطعام:</strong> مأكولات بحرية</p>
+
+                        <p><strong>المكونات:</strong></p>
+                        <ul>
+                            <li>4 سمكات بوري أحمر، مغسول ومنظف.</li>
+                            <li>بضعة أوراق من الأوريجانو الطازج، مقطعة.</li>
+                            <li>1 ملعقة صغيرة من ملح الطعام.</li>
+                            <li>1 ملعقة صغيرة من الفلفل الأسود المطحون.</li>
+                        </ul>
+
+                        <p><strong>الصلصة:</strong></p>
+                        <ul>
+                            <li>1 ملعقة كبيرة من زيت الزيتون.</li>
+                            <li>3 فصوص ثوم مقشرة ومقطعة بشكل ناعم.</li>
+                            <li>1 حبة فلفل أحمر طازج، منزوعة البذور ومقطعة إلى شرائح رفيعة.</li>
+                            <li>بضعة أغصان من إكليل الجبل الطازجة.</li>
+                            <li>6 حبات طماطم طرية، مفرومة.</li>
+                            <li>1/2 ليمونة معصورة.</li>
+                        </ul>
+
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>SF-002</td>
+                <td>وجبة كوسا محشي</td>
+                <td>50000</td>
+                <td><input type="checkbox" class="detail-check"></td>
+                <td><input type="checkbox" class="select-meal"></td>
+            </tr>
+            <tr class="details-row" style="display:none;">
+                <td colspan="5">
+                    <div class="meal-info">
+                        <img src="IMG-20260504-WA0010.jpg" alt="كوسا محشي" width="200">
+                        <p><strong>المطبخ:</strong> شرقي</p>
+                        <p><strong>تصنيف الطعام:</strong> محاشي</p>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>SF-003</td>
+                <td>يبرق</td>
+                <td>75000</td>
+                <td><input type="checkbox" class="detail-check"></td>
+                <td><input type="checkbox" class="select-meal"></td>
+            </tr>
+            <tr class="details-row" style="display:none;">
+                <td colspan="5">
+                    <div class="meal-info">
+                        <img src="IMG-20260504-WA0012.jpg" alt="يبرق" width="200">
+                        <p><strong>المطبخ:</strong> شرقي</p>
+                        <p><strong>تصنيف الطعام:</strong> يبرق</p>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>SF-004</td>
+                <td>كبسة</td>
+                <td>60000</td>
+                <td><input type="checkbox" class="detail-check"></td>
+                <td><input type="checkbox" class="select-meal"></td>
+            </tr>
+            <tr class="details-row" style="display:none;">
+                <td colspan="5">
+                    <div class="meal-info">
+                        <img src="IMG-20260504-WA0016.jpg" alt="كبسة" width="200">
+                        <p><strong>المطبخ:</strong> شرقي</p>
+                        <p><strong>تصنيف الطعام:</strong> كبسة</p>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>SF-005</td>
+                <td>فريكة</td>
+                <td>90000</td>
+                <td><input type="checkbox" class="detail-check"></td>
+                <td><input type="checkbox" class="select-meal"></td>
+            </tr>
+            <tr class="details-row" style="display:none;">
+                <td colspan="5">
+                    <div class="meal-info">
+                        <img src="IMG-20260504-WA0024.jpg" alt="فريكة" width="200">
+                        <p><strong>المطبخ:</strong> شرقي</p>
+                        <p><strong>تصنيف الطعام:</strong> فريكة</p>
+                    </div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <button id="continueBtn">متابعة</button>
+
+    <div id="orderFormContainer" style="display:none;">
+        <h3>إكمال الطلب</h3>
+
+        <form id="deliveryForm">
+
+            <label>الاسم الكامل (English):</label>
+            <input type="text" id="fullName">
+
+            <label>رقم الحساب (6 خانات):</label>
+            <input type="text" id="bankAccount">
+
+            <label>تاريخ الطلب:</label>
+            <input type="text" id="orderDate" placeholder="dd-mm-yyyy">
+
+            <label>رقم الموبايل:</label>
+            <input type="text" id="mobileNumber">
+
+            <button type="submit">إرسال</button>
+        </form>
+    </div>
+
+</body>
+</html>

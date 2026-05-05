@@ -1,0 +1,61 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    background-color: lightgray;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #4caf50;
+    color: white;
+}
+
+.details-row {
+    background-color: #e9f7ef;
+}
+
+.meal-info img {
+    border-radius: 8px;
+}
+
+#orderFormContainer {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: dodgerblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+    button:hover {
+        background-color: #1976D2;
+    }
