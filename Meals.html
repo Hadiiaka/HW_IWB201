@@ -2,12 +2,24 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="utf-8">
-    <title>صفحة الوجبات</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>قائمة الوجبات</title>
     <link rel="stylesheet" href="Style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="myFunctions.js"></script>
 </head>
 <body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="home.html" class="logo"></a>
+            <ul>
+                <li><a href="home.html">الرئيسية</a></li>
+                <li><a href="Meals.html" class="active">الوجبات</a></li>
+                <li><a href="AboutUs.html">من نحن</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <h2>قائمة الوجبات</h2>
 
@@ -21,9 +33,7 @@
                 <th>اختيار</th>
             </tr>
         </thead>
-
         <tbody>
-
             <tr>
                 <td>SF-001</td>
                 <td>وجبة سمك مشوي</td>
@@ -34,10 +44,9 @@
             <tr class="details-row" style="display:none;">
                 <td colspan="5">
                     <div class="meal-info">
-                        <img src="fish.jpg" alt="وجبة سمك" width="200">
+                        <img src="images/fish.jpg" alt="وجبة سمك مشوي" width="200">
 
-                        <p><strong>المطبخ:</strong> المصري</p>
-                        <p><strong>تصنيف الطعام:</strong> مأكولات بحرية</p>
+                        <p><strong>المطبخ:</strong> المصري | <strong>تصنيف الطعام:</strong> مأكولات بحرية</p>
 
                         <p><strong>المكونات:</strong></p>
                         <ul>
@@ -56,11 +65,9 @@
                             <li>6 حبات طماطم طرية، مفرومة.</li>
                             <li>1/2 ليمونة معصورة.</li>
                         </ul>
-
                     </div>
                 </td>
             </tr>
-
             <tr>
                 <td>SF-002</td>
                 <td>وجبة كوسا محشي</td>
@@ -71,13 +78,11 @@
             <tr class="details-row" style="display:none;">
                 <td colspan="5">
                     <div class="meal-info">
-                        <img src="IMG-20260504-WA0010.jpg" alt="كوسا محشي" width="200">
-                        <p><strong>المطبخ:</strong> شرقي</p>
-                        <p><strong>تصنيف الطعام:</strong> محاشي</p>
+                        <img src="images/IMG-20260504-WA0010.jpg" alt="كوسا محشي" width="200">
+                        <p><strong>المطبخ:</strong> شرقي | <strong>تصنيف الطعام:</strong> محاشي</p>
                     </div>
                 </td>
             </tr>
-
             <tr>
                 <td>SF-003</td>
                 <td>يبرق</td>
@@ -88,13 +93,11 @@
             <tr class="details-row" style="display:none;">
                 <td colspan="5">
                     <div class="meal-info">
-                        <img src="IMG-20260504-WA0012.jpg" alt="يبرق" width="200">
-                        <p><strong>المطبخ:</strong> شرقي</p>
-                        <p><strong>تصنيف الطعام:</strong> يبرق</p>
+                        <img src="images/IMG-20260504-WA0012.jpg" alt="يبرق" width="200">
+                        <p><strong>المطبخ:</strong> شرقي | <strong>تصنيف الطعام:</strong> يبرق</p>
                     </div>
                 </td>
             </tr>
-
             <tr>
                 <td>SF-004</td>
                 <td>كبسة</td>
@@ -105,13 +108,11 @@
             <tr class="details-row" style="display:none;">
                 <td colspan="5">
                     <div class="meal-info">
-                        <img src="IMG-20260504-WA0016.jpg" alt="كبسة" width="200">
-                        <p><strong>المطبخ:</strong> شرقي</p>
-                        <p><strong>تصنيف الطعام:</strong> كبسة</p>
+                        <img src="images/IMG-20260504-WA0016.jpg" alt="كبسة" width="200">
+                        <p><strong>المطبخ:</strong> شرقي | <strong>تصنيف الطعام:</strong> كبسة</p>
                     </div>
                 </td>
             </tr>
-
             <tr>
                 <td>SF-005</td>
                 <td>فريكة</td>
@@ -122,36 +123,30 @@
             <tr class="details-row" style="display:none;">
                 <td colspan="5">
                     <div class="meal-info">
-                        <img src="IMG-20260504-WA0024.jpg" alt="فريكة" width="200">
-                        <p><strong>المطبخ:</strong> شرقي</p>
-                        <p><strong>تصنيف الطعام:</strong> فريكة</p>
+                        <img src="images/IMG-20260504-WA0024.jpg" alt="فريكة" width="200">
+                        <p><strong>المطبخ:</strong> شرقي | <strong>تصنيف الطعام:</strong> فريكة</p>
                     </div>
                 </td>
             </tr>
-
         </tbody>
     </table>
 
-    <button id="continueBtn">متابعة</button>
+    <div style="text-align: center; margin: 20px;">
+        <button id="continueBtn">متابعة</button>
+    </div>
 
     <div id="orderFormContainer" style="display:none;">
         <h3>إكمال الطلب</h3>
-
         <form id="deliveryForm">
-
             <label>الاسم الكامل (English):</label>
-            <input type="text" id="fullName">
-
+            <input type="text" id="fullName" required>
             <label>رقم الحساب (6 خانات):</label>
-            <input type="text" id="bankAccount">
-
+            <input type="text" id="bankAccount" required>
             <label>تاريخ الطلب:</label>
-            <input type="text" id="orderDate" placeholder="dd-mm-yyyy">
-
+            <input type="text" id="orderDate" placeholder="dd-mm-yyyy" required>
             <label>رقم الموبايل:</label>
-            <input type="text" id="mobileNumber">
-
-            <button type="submit">إرسال</button>
+            <input type="text" id="mobileNumber" placeholder="09xxxxxxxx" required>
+            <button type="submit" id="submitBtn">إرسال الطلب</button>
         </form>
     </div>
 
